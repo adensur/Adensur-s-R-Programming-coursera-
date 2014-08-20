@@ -1,0 +1,22 @@
+Here is a more detailed explanation of what is going on in this assignement, why is there a complicated function that returns a list of functions and why is there
+"lexical scoping" in R and what it allows us to do.
+
+So the question number 1. What is a function? A function is, basically, a way to save a lot of time by grouping up commands. Instead of typing 10, 100, 1000
+and so on lines of code over and over, you just write them once and then use 1 line of code each time.
+
+This feature, however, comes with a price. A function creates its own environment. That means that inside the function a completely different set of objects 
+and variables is used. For example, if you define a<-2 inside a function, it is a completely different "a" than in your home environment.
+When you need to make a "communication" between the function and your home environment, the "normal" way is to give arguments to the function (that is input),
+and return something from the function (this is output). Here is a typical example of a function that calculates volume based on length, width and height of an object
+a, b and c:
+volume<-function(a,b,c){
+vol<-a*b*c
+vol
+}
+So this function gets a,b, c as input and sets vol as output. This method, however, has its limitations: you can return only one object from a function. 
+
+Sometimes you need a function to return more then one object. In assignement 2, an example was given of a function that needs to return 2 objects: the vector and
+its mean. One way to do that is to construct some sort of ugly object, like a data frame with a vector being its first column, and the mean being the second, or something
+like that. THat is a messy way indeed.
+
+A better way is to enable a function to return (or, better say, communicate) more then one object. In many languages this is done by the concept of global variables.
