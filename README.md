@@ -1,4 +1,4 @@
-Adensur-s-R-Programming-coursera-
+Coursera-course-repo-for-R-programming
 =================================
 
 This is my repo for R Programming course on Coursera.
